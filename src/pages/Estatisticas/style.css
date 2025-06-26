@@ -1,22 +1,34 @@
-.container-estatisticas{
+:root {
+  --roxo-principal: #6a0dad;
+  --roxo-claro: #9d4edd;
+  --roxo-sombra: #dcd0ff;
+  --branco: #ffffff;
+  --texto-escuro: #1c1c1c;
+  --sombra-clara: rgba(106, 13, 173, 0.1);
+}
+
+.container-estatisticas {
   padding: 50px 5%;
   display: flex;
   flex-direction: column;
+  background-color: var(--branco);
 }
 
-h2{
-    margin-bottom: 20px;
-    color: var(--light-brown);
-    font-size: 2rem;
+h2 {
+  margin-bottom: 20px;
+  color: var(--roxo-principal);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .table-component-listagem {
   overflow: auto;
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background: var(--white);
+  box-shadow: 0 4px 20px var(--sombra-clara);
+  background: var(--branco);
   max-height: 60vh;
+  margin-bottom: 30px;
 }
 
 .table-component-listagem table {
@@ -24,48 +36,56 @@ h2{
   table-layout: fixed;
   border-collapse: collapse;
   text-align: left;
-
-  thead {
-    position: sticky;
-    top: 0;
-    background-color: var(--light-brown);
-    color: var(--primary);
-
-    th {
-      padding: 15px 20px;
-      font-weight: 600;
-    }
-  }
-
-  tbody {
-    tr {
-      border-bottom: 1px solid var(--shade);
-      transition: background-color 0.2s;
-
-      &:hover {
-        background-color: var(--shade);
-      }
-
-      &:last-child {
-        border-bottom: none;
-      }
-
-      td {
-        padding: 12px 20px;
-        vertical-align: middle;
-      }
-    }
-  }
 }
 
-.title-top-10{
-  border-left: 5px solid var(--light-brown);
+.table-component-listagem thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--roxo-principal);
+  color: var(--branco);
+  z-index: 1;
+}
+
+.table-component-listagem thead th {
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.table-component-listagem tbody tr {
+  border-bottom: 1px solid var(--roxo-sombra);
+  transition: background-color 0.2s;
+}
+
+.table-component-listagem tbody tr:hover {
+  background-color: var(--roxo-sombra);
+}
+
+.table-component-listagem tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table-component-listagem tbody td {
+  padding: 12px 20px;
+  vertical-align: middle;
+  color: var(--texto-escuro);
+  font-size: 0.95rem;
+}
+
+.title-top-10,
+.title-top-10-valor {
+  border-left: 5px solid var(--roxo-claro);
   padding-left: 10px;
+  font-weight: 600;
+  color: var(--roxo-principal);
+}
+
+.title-top-10 {
   margin-bottom: 20px;
 }
 
-.title-top-10-valor{
-  border-left: 5px solid var(--light-brown);
-  padding-left: 10px;
+.title-top-10-valor {
   margin: 60px 0 20px;
 }

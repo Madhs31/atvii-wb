@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .search-bar {
@@ -52,6 +53,18 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   background: var(--white);
   max-height: 60vh;
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-brown) transparent;
+}
+
+.table-component::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.table-component::-webkit-scrollbar-thumb {
+  background-color: var(--light-brown);
+  border-radius: 10px;
 }
 
 .container-tipos table {
@@ -93,33 +106,34 @@
   }
 }
 
-.dropdown-filter{
-  flex-wrap: wrap;
+.dropdown-filter {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 .genero-dropdown {
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 8px;
   border: 1px solid var(--gray);
-  background-color: var(--primary);
+  background-color: var(--light-brown);
+  color: white;
   cursor: pointer;
   font-size: 14px;
   transition: all 0.3s ease;
-  color: white; /* <-- aqui */
+  font-weight: 500;
 }
 
-
-.genero-dropdown:hover{
-  border-color: var(--light-brown);
+.genero-dropdown:hover {
+  border-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 .genero-dropdown:focus {
   outline: none;
   border-color: var(--light-brown);
-  box-shadow: 0 0 0 2px rgba(194, 158, 120, 0.2);
+  box-shadow: 0 0 0 3px rgba(194, 158, 120, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -138,22 +152,20 @@
 
   .container-tipos table {
     font-size: 12px;
-    text-align: left;
-    tbody {
-      tr {
-        td {
-          padding: 10px 5px;
-        }
-      }
+    thead th {
+      padding: 12px 10px;
+    }
+    tbody tr td {
+      padding: 10px 5px;
     }
   }
 
-  .dropdown-filter{
-    display: flex;
+  .dropdown-filter {
     justify-content: center;
   }
-  .genero-dropdown{
-    width: 70px;
+
+  .genero-dropdown {
+    width: 100px;
     font-size: 12px;
   }
 }

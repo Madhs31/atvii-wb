@@ -7,30 +7,132 @@ interface IProduto {
   descricao: string;
   valor: number;
 }
+
 class Produto extends React.Component {
-  state: {
-    produtos: IProduto[];
-    filtro: string;
-  } = {
+  state = {
     produtos: [
       {
         id: "P1",
-        nomeProd: "Locao Capilar",
-        descricao: "Locao para deixar os cabelos mais sedosos.",
-        valor: 35.99,
+        nomeProd: "Sérum Iluminador com Pérolas de Ouro",
+        descricao: "Ilumina e revitaliza a pele com toque de luxo",
+        valor: 129.90,
       },
       {
         id: "P2",
-        nomeProd: "Creme Hidratante",
-        descricao: "Creme hidratante para passar no rosto, maos e corpo.",
-        valor: 20.45,
+        nomeProd: "Creme Anti-Idade com Peptídeos Inteligentes",
+        descricao: "Atua nos sinais do tempo com alta tecnologia",
+        valor: 159.00,
       },
-    ],
+      {
+        id: "P3",
+        nomeProd: "Gel de Limpeza Facial com Carvão Ativado",
+        descricao: "Desintoxica e purifica profundamente a pele",
+        valor: 49.90,
+      },
+      {
+        id: "P4",
+        nomeProd: "Óleo Facial Nutritivo com Rosa Mosqueta",
+        descricao: "Nutre e regenera peles secas e sensíveis",
+        valor: 69.90,
+      },
+      {
+        id: "P5",
+        nomeProd: "Bálsamo Multifuncional para Lábios e Cutículas",
+        descricao: "Hidratação intensa para áreas ressecadas",
+        valor: 32.00,
+      },
+      {
+        id: "P6",
+        nomeProd: "Creme Corporal Firmador com Cafeína",
+        descricao: "Melhora a firmeza da pele e combate a flacidez",
+        valor: 89.90,
+      },
+      {
+        id: "P7",
+        nomeProd: "Solução Tônica Adstringente com Hamamélis",
+        descricao: "Controla a oleosidade e fecha os poros",
+        valor: 45.00,
+      },
+      {
+        id: "P8",
+        nomeProd: "Creme para Mãos com Vitamina E e Proteção UV",
+        descricao: "Protege e hidrata com ação antioxidante",
+        valor: 35.50,
+      },
+      {
+        id: "P9",
+        nomeProd: "Ampola Capilar de Brilho Instantâneo",
+        descricao: "Tratamento rápido para brilho e maciez",
+        valor: 19.90,
+      },
+      {
+        id: "P10",
+        nomeProd: "Sabonete Íntimo com Prebióticos Naturais",
+        descricao: "Equilibra o pH e fortalece a flora íntima",
+        valor: 29.90,
+      },
+      {
+        id: "P11",
+        nomeProd: "Esfoliante Corporal com Sementes de Damasco",
+        descricao: "Remove células mortas com esfoliação natural",
+        valor: 49.00,
+      },
+      {
+        id: "P12",
+        nomeProd: "Mousse de Limpeza Facial com Colágeno",
+        descricao: "Limpa suavemente enquanto revitaliza",
+        valor: 54.90,
+      },
+      {
+        id: "P13",
+        nomeProd: "Máscara Noturna de Hidratação Profunda",
+        descricao: "Recupera a pele durante o sono",
+        valor: 79.00,
+      },
+      {
+        id: "P14",
+        nomeProd: "Creme para Pés com Ureia 10%",
+        descricao: "Suaviza rachaduras e hidrata intensamente",
+        valor: 39.90,
+      },
+      {
+        id: "P15",
+        nomeProd: "Spray Finalizador com Efeito Gloss",
+        descricao: "Finalização com brilho luminoso sem pesar",
+        valor: 44.90,
+      },
+      {
+        id: "P16",
+        nomeProd: "Shampoo Detox com Carvão Vegetal",
+        descricao: "Limpeza profunda sem agredir os fios",
+        valor: 59.00,
+      },
+      {
+        id: "P17",
+        nomeProd: "Leave-in Reconstrutor com Queratina",
+        descricao: "Fortalece e protege os fios do calor",
+        valor: 62.00,
+      },
+      {
+        id: "P18",
+        nomeProd: "Hidratante Facial com Filtro Solar FPS 20",
+        descricao: "Protege contra o sol e hidrata ao mesmo tempo",
+        valor: 74.90,
+      },
+      {
+        id: "P19",
+        nomeProd: "Bruma Corporal Perfumada com Flor de Laranjeira",
+        descricao: "Perfume suave e refrescância prolongada",
+        valor: 38.00,
+      },
+      {
+        id: "P20",
+        nomeProd: "Óleo Bifásico Hidratante com Amêndoas Doces",
+        descricao: "Nutrição intensa com toque seco",
+        valor: 58.00,
+      },
+    ] as IProduto[],
     filtro: "",
-  };
-
-  buscarProduto = (): IProduto[] => {
-    return this.state.produtos;
   };
 
   filtrarProdutos = (produtos: IProduto[], filtro: string): IProduto[] => {
@@ -38,7 +140,8 @@ class Produto extends React.Component {
     return produtos.filter(
       (produto) =>
         produto.id.toLowerCase().includes(filtro.toLowerCase()) ||
-        produto.nomeProd.toLowerCase().includes(filtro.toLowerCase())
+        produto.nomeProd.toLowerCase().includes(filtro.toLowerCase()) ||
+        produto.descricao.toLowerCase().includes(filtro.toLowerCase())
     );
   };
 
@@ -55,22 +158,21 @@ class Produto extends React.Component {
         <div className="container-cli-pro-ser">
           <h2>Produtos</h2>
           <div className="search-session">
-            <div className="search-bar">
-            </div>
-            <Link to={"/cadastroproduto"} style={{ color: "inherit" }}>
+            <Link to="/cadastroproduto" style={{ color: "inherit" }}>
               <div className="button-cadastro">
                 <span>Cadastrar Produto</span>
               </div>
             </Link>
           </div>
         </div>
+
         <div className="table-component" role="region" tabIndex={0}>
           <table>
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>Descriçao</th>
+                <th>Descrição</th>
                 <th>Valor</th>
               </tr>
             </thead>
@@ -80,7 +182,9 @@ class Produto extends React.Component {
                   <td>{produto.id}</td>
                   <td>{produto.nomeProd}</td>
                   <td>{produto.descricao}</td>
-                  <td>R$ {produto.valor}</td>
+                  <td>
+                    R$ {produto.valor.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}
+                  </td>
                 </tr>
               ))}
             </tbody>
