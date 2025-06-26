@@ -9,7 +9,7 @@ class Estatistica extends React.Component {
         <h2>Acessar Estatisticas</h2>
         <div className="card-estatistica">
           <div className="text-estatistica">
-            <h4>Listagens</h4>
+            <h2>Listagens</h2>
             <br />
             <div>
               <p>
