@@ -31,24 +31,24 @@
   gap: 30px;
 }
 
-/* Cada card container - remove padding para evitar aninhamento visual estranho */
+/* Cada card container */
 .card-div {
   flex: 1;
-  min-width: 300px;
+  min-width: 280px;
   max-width: 32%;
-  background: transparent; /* sem fundo aqui */
+  background: transparent;
   border-radius: 16px;
   box-sizing: border-box;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover animação no container para dar feedback */
+/* Hover animação */
 .card-div:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(126, 34, 206, 0.2);
 }
 
-/* Estilo do Card (que fica dentro da div) */
+/* Card conteúdo */
 .card-div > * {
   background: white;
   border-radius: 16px;
@@ -56,4 +56,21 @@
   box-shadow: 0 10px 20px rgba(126, 34, 206, 0.1);
   height: 100%;
   box-sizing: border-box;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+  .card-div {
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .session-cards h2 {
+    font-size: 2rem;
+  }
+
+  .card-div {
+    max-width: 100%;
+  }
 }

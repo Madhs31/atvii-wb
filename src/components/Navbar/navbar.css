@@ -3,7 +3,7 @@
   align-items: center;
 }
 
-/* Botão hambúrguer */
+/* Botão hambúrguer controlado no Header */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -62,12 +62,8 @@
   color: #a855f7;
 }
 
-/* Mobile */
+/* Responsividade */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
   .menu {
     position: absolute;
     top: 70px;
@@ -82,6 +78,7 @@
     pointer-events: none;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    z-index: 999;
   }
 
   .menu.active {

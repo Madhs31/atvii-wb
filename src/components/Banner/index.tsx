@@ -1,17 +1,19 @@
 import React from "react";
 import "./style.css";
-import { Link } from "react-router-dom";
 
 class Banner extends React.Component {
   render(): React.ReactNode {
     return (
       <div className="container-banner">
-        <div className="text">
-          <h2>World Beauty</h2>
-          <p>
-            Seja bem vindo ao sistema World Beauty, aqui você pode cadastrar
-            seus Clientes, Produtos e servicos.
-          </p>
+        <div className="text-and-image">
+          <div className="text">
+            <h2>World Beauty</h2>
+            <p>
+              Nosso sistema foi criado para tornar sua gestão mais simples: cadastre seus clientes, controle seus produtos e organize seus serviços em poucos cliques.
+              Aproveite a experiência e deixe a tecnologia cuidar da parte chata, enquanto você foca na beleza do seu trabalho. 💅✨
+            </p>
+          </div>
+          <img src="/logo.png" alt="Logo World Beauty" className="logo-large" />
         </div>
       </div>
     );

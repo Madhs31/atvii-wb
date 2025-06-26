@@ -19,21 +19,22 @@ h2 {
   color: var(--roxo-principal);
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .table-component-listagem {
-  overflow: auto;
+  overflow-x: auto;
   width: 100%;
   border-radius: 20px;
   box-shadow: 0 4px 20px var(--sombra-clara);
   background: var(--branco);
-  max-height: 60vh;
   margin-bottom: 30px;
 }
 
 .table-component-listagem table {
   width: 100%;
-  table-layout: fixed;
+  min-width: 600px;
+  table-layout: auto;
   border-collapse: collapse;
   text-align: left;
 }
@@ -52,6 +53,7 @@ h2 {
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .table-component-listagem tbody tr {
@@ -72,6 +74,9 @@ h2 {
   vertical-align: middle;
   color: var(--texto-escuro);
   font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .title-top-10,
@@ -88,4 +93,41 @@ h2 {
 
 .title-top-10-valor {
   margin: 60px 0 20px;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .table-component-listagem table {
+    min-width: 100%;
+  }
+
+  .table-component-listagem thead th,
+  .table-component-listagem tbody td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .title-top-10,
+  .title-top-10-valor {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-estatisticas {
+    padding: 30px 3%;
+  }
+
+  .table-component-listagem {
+    border-radius: 12px;
+  }
+
+  .title-top-10,
+  .title-top-10-valor {
+    font-size: 0.9rem;
+  }
 }

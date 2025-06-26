@@ -11,13 +11,14 @@
 
 /* Container principal */
 .container-header {
-  background-color: #ffffff; /* branco */
-  border-bottom: 2px solid #e5e7eb; /* cinza claro */
-  color: #1f2937; /* cinza escuro para o texto */
+  background-color: #ffffff;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1f2937;
   padding: 1rem 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 1000;
 }
-
 
 /* Layout interno */
 .header-inner {
@@ -40,6 +41,10 @@
 }
 
 /* Menu desktop */
+.menu {
+  display: flex;
+}
+
 .menu ul {
   display: flex;
   gap: 2rem;
@@ -98,9 +103,40 @@
 .menu-toggle.open .bar:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
+
 .menu-toggle.open .bar:nth-child(2) {
   opacity: 0;
 }
+
 .menu-toggle.open .bar:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border-top: 1px solid #e5e7eb;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }

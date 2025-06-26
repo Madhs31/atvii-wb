@@ -36,6 +36,17 @@ class Header extends React.Component<HeaderProps, HeaderState> {
             </Link>
           </div>
 
+          {/* Botão hamburguer */}
+          <button
+            className={`menu-toggle ${isMenuOpen ? "open" : ""}`}
+            onClick={this.toggleMenu}
+            aria-label="Abrir menu"
+          >
+            <span className="bar" />
+            <span className="bar" />
+            <span className="bar" />
+          </button>
+
           <Navbar isMenuOpen={isMenuOpen} toggleMenu={this.toggleMenu} />
         </div>
       </header>
