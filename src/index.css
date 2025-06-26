@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --purple-light: #f4eefc;
+  --purple: #a855f7;
+  --purple-dark: #7e22ce;
+  --hover: #c084fc;
+  --text-dark: #1C1C1E;
+  --gray-border: #e5e7eb;
+}
+
+
+body {
+  color: var(--text-dark);
+  background-color: var(--white);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+ul, nav {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--purple);
+}
