@@ -20,7 +20,7 @@ Desenvolver uma **GUI (Graphical User Interface)** funcional e responsiva para o
 | Tecnologia              | Versão         | 
 |------------------------|----------------|
 | [React](https://reactjs.org/)                 | 18.0.0        |
-| [Node.js](https://nodejs.org)                 | v16.14.2      |                                                                        |
+| [Node.js](https://nodejs.org)                 | 16.14.2       |                                                                  
 | [TypeScript](https://www.typescriptlang.org/) | 4.6.3         | 
 | [MaterializeCSS](https://materializecss.com/) | 1.0.0-rc.2    | 
 | [VSCode](https://code.visualstudio.com/)      | Recomendado   | 
