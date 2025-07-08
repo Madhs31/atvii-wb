@@ -1,29 +1,41 @@
-# Sistema GUI - Grupo World Beauty (ATVII)
+# 💇‍♀️ Sistema GUI - Grupo World Beauty (ATVII)
 
-Este repositório contém o pré-projeto e a continuação do desenvolvimento da interface gráfica do sistema de gerenciamento de clientes, produtos e consumo do **Grupo World Beauty (WB)**. O objetivo é transformar o sistema originalmente feito em linha de comando (CLI) em uma aplicação web moderna, responsiva e intuitiva, acessível via navegadores em desktops, tablets e celulares.
+Este repositório contém o desenvolvimento da interface gráfica do sistema de gerenciamento de clientes, produtos e consumo do Grupo World Beauty (WB). O objetivo é transformar o sistema originalmente feito em linha de comando (CLI) em uma aplicação web moderna, responsiva e intuitiva, acessível via navegadores em desktops, tablets e celulares.
+
+---
 
 ## 👨‍🏫 Projeto proposto por:
 **Prof. Dr. Eng. Gerson Penha**
 
-## 🎯 Objetivo
+---
 
-Desenvolver uma GUI (Graphical User Interface) funcional e responsiva para o sistema do Grupo WB, utilizando tecnologias web modernas, com foco na usabilidade e experiência do usuário (UI Design).
+## 🎯 Objetivo
+Desenvolver uma **GUI (Graphical User Interface)** funcional e responsiva para o sistema do Grupo WB, utilizando tecnologias web modernas com foco na usabilidade e experiência do usuário (UI/UX Design).
+
+---
+
 
 ## 📦 Tecnologias Utilizadas
 
-- [React 17+](https://reactjs.org) (componentes de classe obrigatórios)
-- [MaterializeCSS 1.0.0](https://materializecss.com) *(pode ser substituído por outro framework frontend, se necessário)*
-- TypeScript
-- HTML e CSS
-- Visual Studio Code (VSCode)
+| Tecnologia              | Versão         | 
+|------------------------|----------------|
+| [React](https://reactjs.org/)                 | 18.0.0        |
+| [Node.js](https://nodejs.org)                 | v16.14.2      |                                                                        |
+| [TypeScript](https://www.typescriptlang.org/) | 4.6.3         | 
+| [MaterializeCSS](https://materializecss.com/) | 1.0.0-rc.2    | 
+| [VSCode](https://code.visualstudio.com/)      | Recomendado   | 
+
+---
 
 ## 📱 Requisitos
 
 - A aplicação deve ser **responsiva** (adaptável a dispositivos móveis).
-- Todos os componentes React devem ser implementados como **classes**.
-- Não há necessidade de conexão com backend nesta fase.
-- O foco está nas **telas e transições**, compondo o **pré-projeto**.
+- O foco está nas **telas e transições** — compondo o **pré-projeto visual**.
+- Não há obrigatoriedade de back-end nesta fase inicial.
+- Interface construída com **React + TypeScript + MaterializeCSS**.
+- Idealmente, utilizar **componentes de classe**, conforme proposta inicial (pode ser adaptado).
 
+---
 
 ## 🚀 Como rodar o projeto localmente
 
